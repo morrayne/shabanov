@@ -1,0 +1,232 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\morrayne\\Desktop\\RESTfull\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\morrayne\\desktop\\restfull\\myapp.client\\pages\\studentdeatils.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\pages\\studentdeatils.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\morrayne\\desktop\\restfull\\restfull.domain\\entities\\studyprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\studyprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|c:\\users\\morrayne\\desktop\\restfull\\restfull.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|solutionrelative:restfull.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\morrayne\\desktop\\restfull\\restfull.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|c:\\users\\morrayne\\desktop\\restfull\\restfull.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|solutionrelative:restfull.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|c:\\users\\morrayne\\desktop\\restfull\\restfull.api\\controllers\\controllersstudentgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|solutionrelative:restfull.api\\controllers\\controllersstudentgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/RESTfull/True/SqlTable/dbo.Students.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\morrayne\\desktop\\restfull\\myapp.client\\pages\\studentedit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\pages\\studentedit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FBC18C8-E4E7-44AF-8D5A-FA6E67FD5BCC}|RESTfull.Infrastructure\\RESTfull.Infrastructure.csproj|c:\\users\\morrayne\\desktop\\restfull\\restfull.infrastructure\\data\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FBC18C8-E4E7-44AF-8D5A-FA6E67FD5BCC}|RESTfull.Infrastructure\\RESTfull.Infrastructure.csproj|solutionrelative:restfull.infrastructure\\data\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\morrayne\\desktop\\restfull\\myapp.client\\pages\\students.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\pages\\students.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SQLQuery3.sql ",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery3.sql",
+              "RelativeDocumentMoniker": "SQLQuery3.sql",
+              "ToolTip": "SQLQuery3.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-04T20:57:10.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.API\\Program.cs",
+              "RelativeDocumentMoniker": "RESTfull.API\\Program.cs",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.API\\Program.cs",
+              "RelativeToolTip": "RESTfull.API\\Program.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAADsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T19:53:03.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentDeatils.razor",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\MyApp.Client\\Pages\\StudentDeatils.razor",
+              "RelativeDocumentMoniker": "MyApp.Client\\Pages\\StudentDeatils.razor",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\MyApp.Client\\Pages\\StudentDeatils.razor",
+              "RelativeToolTip": "MyApp.Client\\Pages\\StudentDeatils.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T19:52:26.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ControllersStudentGroupsController.cs",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.API\\Controllers\\ControllersStudentGroupsController.cs",
+              "RelativeDocumentMoniker": "RESTfull.API\\Controllers\\ControllersStudentGroupsController.cs",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.API\\Controllers\\ControllersStudentGroupsController.cs",
+              "RelativeToolTip": "RESTfull.API\\Controllers\\ControllersStudentGroupsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T20:18:56.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.API\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "RESTfull.API\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.API\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "RESTfull.API\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAMwN4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T19:51:57.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudyProgram.cs",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T20:16:32.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.Domain\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.Domain\\Entities\\Student.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\Student.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAASwA0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T19:47:15.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Students.razor",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\MyApp.Client\\Pages\\Students.razor",
+              "RelativeDocumentMoniker": "MyApp.Client\\Pages\\Students.razor",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\MyApp.Client\\Pages\\Students.razor",
+              "RelativeToolTip": "MyApp.Client\\Pages\\Students.razor",
+              "ViewState": "AgIAADgAAAAAAAAAAAAvwEkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T19:57:19.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StudentEdit.razor",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\MyApp.Client\\Pages\\StudentEdit.razor",
+              "RelativeDocumentMoniker": "MyApp.Client\\Pages\\StudentEdit.razor",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\MyApp.Client\\Pages\\StudentEdit.razor",
+              "RelativeToolTip": "MyApp.Client\\Pages\\StudentEdit.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T20:05:28.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.Students [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/RESTfull/True/SqlTable/dbo.Students.sql",
+              "ToolTip": "dbo.Students [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-04T20:40:14.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\SQLQuery1.sql",
+              "RelativeDocumentMoniker": "SQLQuery1.sql",
+              "ToolTip": "SQLQuery1.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-04T20:40:30.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.Infrastructure\\Data\\Context.cs",
+              "RelativeDocumentMoniker": "RESTfull.Infrastructure\\Data\\Context.cs",
+              "ToolTip": "C:\\Users\\morrayne\\Desktop\\RESTfull\\RESTfull.Infrastructure\\Data\\Context.cs",
+              "RelativeToolTip": "RESTfull.Infrastructure\\Data\\Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T19:51:25.075Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

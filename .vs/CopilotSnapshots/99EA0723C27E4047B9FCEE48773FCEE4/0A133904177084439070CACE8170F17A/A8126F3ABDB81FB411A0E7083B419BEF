@@ -1,0 +1,13 @@
+﻿namespace RESTfull.Domain.Entities
+{
+    public class ContactInfo
+    {
+        public int Id { get; set; }
+
+        public int PhoneNumber { get; set; }
+        public string Address { get; set; } = string.Empty;
+
+        public int StudentId { get; set; }
+        public Student Student { get; set; } = null!;
+    }
+}

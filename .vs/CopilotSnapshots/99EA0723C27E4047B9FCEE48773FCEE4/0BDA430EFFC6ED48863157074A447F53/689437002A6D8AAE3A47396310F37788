@@ -1,0 +1,185 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RESTfull.Domain.Entities;
+using RESTfull.Infrastructure.Data;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using RESTfull.API.Models;
+
+[ApiController]
+[Route("api/[controller]")]
+public class StudentsController : ControllerBase
+{
+    private readonly AppDbContext _db;
+    private readonly ILogger<StudentsController> _logger;
+
+    public StudentsController(AppDbContext db, ILogger<StudentsController> logger)
+    {
+        _db = db;
+        _logger = logger;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll([FromQuery] string? search)
+    {
+        var students = await _db.Students
+            .Include(s => s.ContactInfo)
+            .Include(s => s.Education)
+            .Include(s => s.StudyProgram)
+            .Include(s => s.StudentGroup)
+            .ToListAsync();
+
+        if (string.IsNullOrWhiteSpace(search))
+            return Ok(students);
+
+        if (int.TryParse(search, out var id))
+            return Ok(students.Where(s => s.Id == id));
+
+        var q = search.Trim();
+        return Ok(students.Where(s =>
+            (!string.IsNullOrEmpty(s.FirstName) && s.FirstName.Contains(q, StringComparison.OrdinalIgnoreCase)) ||
+            (!string.IsNullOrEmpty(s.LastName) && s.LastName.Contains(q, StringComparison.OrdinalIgnoreCase)) ||
+            (!string.IsNullOrEmpty(s.MiddleName) && s.MiddleName.Contains(q, StringComparison.OrdinalIgnoreCase))
+        ));
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        var s = await _db.Students
+            .Include(st => st.ContactInfo)
+            .Include(st => st.Education)
+            .Include(st => st.StudyProgram)
+            .Include(st => st.StudentGroup)
+            .FirstOrDefaultAsync(st => st.Id == id);
+
+        if (s == null) return NotFound();
+        return Ok(s);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] StudentCreateDto dto)
+    {
+        if (dto == null) return BadRequest("Empty payload");
+        if (string.IsNullOrWhiteSpace(dto.FirstName) || string.IsNullOrWhiteSpace(dto.LastName))
+            return BadRequest("FirstName and LastName are required");
+
+        try
+        {
+            // find or create study program deterministically
+            var sp = await _db.StudyPrograms.FirstOrDefaultAsync(x => x.Faculty == dto.Faculty && x.Direction == dto.Direction && x.Speciality == dto.Speciality);
+            if (sp == null)
+            {
+                sp = new StudyProgram
+                {
+                    Institution = "МИРЭА",
+                    Faculty = dto.Faculty,
+                    Direction = dto.Direction,
+                    Speciality = dto.Speciality
+                };
+                _db.StudyPrograms.Add(sp);
+                await _db.SaveChangesAsync();
+            }
+
+            // Validate StudentGroupId if provided
+            int? groupId = null;
+            if (dto.StudentGroupId.HasValue)
+            {
+                var exists = await _db.StudentGroups.AnyAsync(g => g.Id == dto.StudentGroupId.Value);
+                if (exists) groupId = dto.StudentGroupId.Value;
+            }
+
+            // Initialize contact and education without StudentId; set StudentId after student creation
+            var contact = new ContactInfo { PhoneNumber = string.Empty, Address = string.Empty };
+            var education = new Education { InstitutionName = string.Empty, AdmissionYear = 0, GraduationYear = 0, Qualification = string.Empty };
+
+            // Create student first
+            var student = new Student
+            {
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                MiddleName = dto.MiddleName,
+                BirthDate = dto.BirthDate,
+                StudyProgramId = sp.Id,
+                StudentGroupId = groupId
+            };
+
+            _db.Students.Add(student);
+            await _db.SaveChangesAsync();
+
+            // Now attach student id to contact and education and save
+            contact.StudentId = student.Id;
+            education.StudentId = student.Id;
+
+            _db.ContactInfos.Add(contact);
+            _db.Educations.Add(education);
+            await _db.SaveChangesAsync();
+
+            var result = await _db.Students
+                .Include(s => s.ContactInfo)
+                .Include(s => s.Education)
+                .Include(s => s.StudyProgram)
+                .Include(s => s.StudentGroup)
+                .FirstOrDefaultAsync(s => s.Id == student.Id);
+
+            return CreatedAtAction(nameof(Get), new { id = student.Id }, result);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Create failed");
+            return StatusCode(500, new { error = "Create failed", detail = ex.Message });
+        }
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] StudentCreateDto dto)
+    {
+        var exists = await _db.Students.FindAsync(id);
+        if (exists == null) return NotFound();
+
+        try
+        {
+            var sp = await _db.StudyPrograms.FirstOrDefaultAsync(x => x.Faculty == dto.Faculty && x.Direction == dto.Direction && x.Speciality == dto.Speciality);
+            if (sp == null)
+            {
+                sp = new StudyProgram { Institution = "МИРЭА", Faculty = dto.Faculty, Direction = dto.Direction, Speciality = dto.Speciality };
+                _db.StudyPrograms.Add(sp);
+                await _db.SaveChangesAsync();
+            }
+
+            int? groupId = null;
+            if (dto.StudentGroupId.HasValue)
+            {
+                var gexists = await _db.StudentGroups.AnyAsync(g => g.Id == dto.StudentGroupId.Value);
+                if (gexists) groupId = dto.StudentGroupId.Value;
+            }
+
+            exists.FirstName = dto.FirstName;
+            exists.LastName = dto.LastName;
+            exists.MiddleName = dto.MiddleName;
+            exists.BirthDate = dto.BirthDate;
+            exists.StudyProgramId = sp.Id;
+            exists.StudentGroupId = groupId;
+
+            await _db.SaveChangesAsync();
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Update failed");
+            return StatusCode(500, new { error = "Update failed", detail = ex.Message });
+        }
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var entity = await _db.Students.FindAsync(id);
+        if (entity == null) return NotFound();
+        _db.Students.Remove(entity);
+        await _db.SaveChangesAsync();
+        return NoContent();
+    }
+}

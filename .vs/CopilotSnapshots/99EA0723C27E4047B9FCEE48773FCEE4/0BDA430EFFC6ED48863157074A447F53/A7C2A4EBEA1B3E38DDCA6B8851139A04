@@ -1,0 +1,19 @@
+﻿using System;
+
+namespace RESTfull.API.Models
+{
+    public class StudentCreateDto
+    {
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string MiddleName { get; set; } = string.Empty;
+        public DateTime BirthDate { get; set; }
+
+        // StudyProgram fields
+        public string Faculty { get; set; } = string.Empty;
+        public string Direction { get; set; } = string.Empty;
+        public string Speciality { get; set; } = string.Empty;
+
+        public int? StudentGroupId { get; set; }
+    }
+}

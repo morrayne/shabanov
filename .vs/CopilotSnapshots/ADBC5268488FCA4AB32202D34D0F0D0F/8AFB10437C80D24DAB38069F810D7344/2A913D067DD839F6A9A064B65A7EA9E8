@@ -1,0 +1,129 @@
+﻿using Microsoft.EntityFrameworkCore;
+using RESTfull.Domain.Entities;
+using RESTfull.Infrastructure.Data;
+
+
+
+var builder = WebApplication.CreateBuilder(args);
+
+// DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlOptions => sqlOptions.EnableRetryOnFailure(
+            maxRetryCount: 5,
+            maxRetryDelay: TimeSpan.FromSeconds(10),
+            errorNumbersToAdd: null
+        )
+    )
+);
+
+// CORS
+var allowedOrigins = "_allowedOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: allowedOrigins,
+        policy =>
+        {
+            policy.WithOrigins("https://localhost:7280") // адрес твоего Blazor клиента без пробела!
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
+
+
+// Репозитории
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+// или конкретные:
+// builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+
+// Контроллеры и Swagger
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Подключаем CORS до MapControllers()
+app.UseCors(allowedOrigins);
+
+// Swagger (только в Dev)
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+
+    if (!db.Students.Any())
+    {
+        var program = new StudyProgram
+        {
+            Institution = "МИРЭА",
+            Faculty = "Факультет информатики",
+            Direction = "Программная инженерия",
+            Speciality = "Frontend-разработка"
+        };
+        db.StudyPrograms.Add(program);
+        db.SaveChanges();
+
+        var group = new StudentGroup
+        {
+            Name = "Группа А",
+            Number = 101,
+            StudyProgramId = program.Id
+        };
+        db.StudentGroups.Add(group);
+        db.SaveChanges();
+
+        var contact = new ContactInfo
+        {
+            PhoneNumber = "+7 999 123-45-67",
+            Address = "Москва, ул. Пушкина, д. 10"
+        };
+        db.ContactInfos.Add(contact);
+        db.SaveChanges();
+
+        var education = new Education
+        {
+            InstitutionName = "МИРЭА",
+            AdmissionYear = 2018,
+            GraduationYear = 2022,
+            Qualification = "Бакалавр"
+        };
+        db.Educations.Add(education);
+        db.SaveChanges();
+
+        var student = new Student
+        {
+            FirstName = "Ivan",
+            LastName = "Ivanov",
+            MiddleName = "Ivanovich",
+            BirthDate = new DateTime(2000, 1, 1),
+            StudyProgramId = program.Id,
+            StudentGroupId = group.Id,
+            ContactInfo = contact,
+            Education = education
+        };
+        db.Students.Add(student);
+        db.SaveChanges();
+
+        contact.StudentId = student.Id;
+        education.StudentId = student.Id;
+        db.SaveChanges();
+    }
+}
+

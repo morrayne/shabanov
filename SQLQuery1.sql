@@ -1,0 +1,1 @@
+﻿ALTER TABLE dbo.Students DROP COLUMN EducationId;

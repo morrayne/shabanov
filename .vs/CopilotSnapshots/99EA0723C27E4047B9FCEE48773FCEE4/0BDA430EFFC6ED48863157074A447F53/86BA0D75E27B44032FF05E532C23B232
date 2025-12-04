@@ -1,0 +1,15 @@
+﻿namespace RESTfull.Domain.Entities
+{
+    public class StudentGroup
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; } = string.Empty;
+        public int Number { get; set; }
+
+        public int StudyProgramId { get; set; }
+
+        public StudyProgram? StudyProgram { get; set; }
+        public List<Student> Students { get; set; } = new();
+    }
+}

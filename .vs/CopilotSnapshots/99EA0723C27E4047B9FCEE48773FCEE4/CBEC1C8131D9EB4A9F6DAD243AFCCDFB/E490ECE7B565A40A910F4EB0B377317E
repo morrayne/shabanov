@@ -1,0 +1,126 @@
+﻿@page "/students/create"
+@page "/students/edit/{Id:int}"
+@inject MyApp.Client.Services.IStudentService StudentService
+@inject NavigationManager NavigationManager
+
+<h3>@(isNew ? "Создать студента" : "Редактировать студента")</h3>
+
+@if (model == null || studyPrograms == null || groups == null)
+{
+    <p><em>Загрузка...</em></p>
+}
+else
+{
+    <EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label class="form-label">Фамилия</label>
+            <InputText class="form-control" @bind-Value="model.LastName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Имя</label>
+            <InputText class="form-control" @bind-Value="model.FirstName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Отчество</label>
+            <InputText class="form-control" @bind-Value="model.MiddleName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Дата рождения</label>
+            <InputDate class="form-control" @bind-Value="model.BirthDate" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Программа обучения</label>
+            <InputSelect class="form-select" @bind-Value="model.StudyProgramId">
+                <option value="">-- выберите программу --</option>
+                @foreach (var p in studyPrograms)
+                {
+                    <option value="@p.Id">@p.Faculty - @p.Speciality</option>
+                }
+            </InputSelect>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Учебная группа</label>
+            <InputSelect class="form-select" @bind-Value="model.StudentGroupId">
+                <option value="">-- выберите группу --</option>
+                @foreach (var g in groups)
+                {
+                    <option value="@g.Id">@g.Name (@g.Number)</option>
+                }
+            </InputSelect>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+        <button class="btn btn-secondary ms-2" type="button" @onclick="Cancel">Отмена</button>
+    </EditForm>
+
+    @if (!string.IsNullOrEmpty(serverError))
+    {
+        <div class="alert alert-danger mt-3">@serverError</div>
+    }
+}
+
+@code {
+    [Parameter] public int? Id { get; set; }
+    private MyApp.Client.Models.StudentCreateDto? model;
+    private bool isNew => !Id.HasValue;
+
+    private string? serverError;
+
+    private List<RESTfull.Domain.Entities.StudyProgram>? studyPrograms;
+    private List<RESTfull.Domain.Entities.StudentGroup>? groups;
+
+    protected override async Task OnInitializedAsync()
+    {
+        studyPrograms = (await StudentService.GetStudyProgramsAsync()) ?? new List<RESTfull.Domain.Entities.StudyProgram>();
+        groups = (await StudentService.GetGroupsAsync()) ?? new List<RESTfull.Domain.Entities.StudentGroup>();
+
+        if (isNew)
+        {
+            model = new MyApp.Client.Models.StudentCreateDto
+            {
+                BirthDate = DateTime.Today
+            };
+        }
+        else
+        {
+            var s = await StudentService.GetByIdAsync(Id.Value);
+            if (s == null) { NavigationManager.NavigateTo("/students"); return; }
+            model = new MyApp.Client.Models.StudentCreateDto
+            {
+                FirstName = s.FirstName,
+                LastName = s.LastName,
+                MiddleName = s.MiddleName,
+                BirthDate = s.BirthDate,
+                StudyProgramId = s.StudyProgram?.Id,
+                StudentGroupId = s.StudentGroup?.Id
+            };
+        }
+    }
+
+    async Task HandleValidSubmit()
+    {
+        serverError = null;
+        if (model == null) return;
+
+        if (isNew)
+        {
+            var (created, error) = await StudentService.CreateAsync(model);
+            if (created != null) NavigationManager.NavigateTo("/students"); else serverError = error ?? "Неизвестная ошибка";
+        }
+        else
+        {
+            var (ok, error) = await StudentService.UpdateAsync(Id.Value, model);
+            if (ok) NavigationManager.NavigateTo("/students"); else serverError = error ?? "Неизвестная ошибка";
+        }
+    }
+
+    void Cancel() => NavigationManager.NavigateTo("/students");
+}

@@ -1,0 +1,127 @@
+﻿@page "/students/create"
+@page "/students/edit/{Id:int}"
+@inject MyApp.Client.Services.IStudentService StudentService
+@inject NavigationManager NavigationManager
+
+<h3>@(isNew ? "Создать студента" : "Редактировать студента")</h3>
+
+@if (model == null)
+{
+    <p><em>Загрузка...</em></p>
+}
+else
+{
+    <EditForm Model="model" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label class="form-label">Фамилия</label>
+            <InputText class="form-control" @bind-Value="model.LastName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Имя</label>
+            <InputText class="form-control" @bind-Value="model.FirstName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Отчество</label>
+            <InputText class="form-control" @bind-Value="model.MiddleName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Дата рождения</label>
+            <InputDate class="form-control" @bind-Value="model.BirthDate" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Факультет</label>
+            <InputSelect class="form-select" @bind-Value="model.Faculty">
+                @foreach (var f in Faculties)
+                {
+                    <option value="@f">@f</option>
+                }
+            </InputSelect>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Направление</label>
+            <InputSelect class="form-select" @bind-Value="model.Direction">
+                @foreach (var d in Directions)
+                {
+                    <option value="@d">@d</option>
+                }
+            </InputSelect>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Специальность</label>
+            <InputText class="form-control" @bind-Value="model.Speciality" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Student Group Id</label>
+            <InputNumber class="form-control" @bind-Value="model.StudentGroupId" />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+        <button class="btn btn-secondary ms-2" type="button" @onclick="Cancel">Отмена</button>
+    </EditForm>
+}
+
+@code {
+    [Parameter] public int? Id { get; set; }
+    private MyApp.Client.Models.StudentCreateDto? model;
+    private bool isNew => !Id.HasValue;
+
+    private readonly string[] Faculties = new[] { "ИТПИ", "РТС", "БИС" };
+    private readonly string[] Directions = new[] { "09.03.01", "09.03.02", "09.03.03" };
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (isNew)
+        {
+            model = new MyApp.Client.Models.StudentCreateDto
+            {
+                BirthDate = DateTime.Today,
+                Faculty = Faculties.First(),
+                Direction = Directions.First()
+            };
+        }
+        else
+        {
+            var s = await StudentService.GetByIdAsync(Id.Value);
+            if (s == null) { NavigationManager.NavigateTo("/students"); return; }
+            model = new MyApp.Client.Models.StudentCreateDto
+            {
+                FirstName = s.FirstName,
+                LastName = s.LastName,
+                MiddleName = s.MiddleName,
+                BirthDate = s.BirthDate,
+                Faculty = s.StudyProgram?.Faculty ?? Faculties.First(),
+                Direction = s.StudyProgram?.Direction ?? Directions.First(),
+                Speciality = s.StudyProgram?.Speciality ?? string.Empty,
+                StudentGroupId = s.StudentGroupId
+            };
+        }
+    }
+
+    async Task HandleValidSubmit()
+    {
+        if (model == null) return;
+
+        if (isNew)
+        {
+            var created = await StudentService.CreateAsync(model);
+            if (created != null) NavigationManager.NavigateTo("/students");
+        }
+        else
+        {
+            var ok = await StudentService.UpdateAsync(Id.Value, model);
+            if (ok) NavigationManager.NavigateTo("/students");
+        }
+    }
+
+    void Cancel() => NavigationManager.NavigateTo("/students");
+}

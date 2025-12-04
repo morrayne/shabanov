@@ -1,0 +1,25 @@
+﻿namespace RESTfull.Domain.Entities
+{
+    public class Student
+    {
+        public int Id { get; set; }
+
+        public string LastName { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string MiddleName { get; set; } = string.Empty;
+
+        public DateTime BirthDate { get; set; }
+
+        // Foreign key properties (made nullable to avoid circular insert issues)
+        public int? ContactInfoId { get; set; }
+        public int? EducationId { get; set; }
+        public int? StudyProgramId { get; set; }
+        public int? StudentGroupId { get; set; }
+
+        // Navigation properties
+        public ContactInfo? ContactInfo { get; set; }
+        public Education? Education { get; set; }
+        public StudyProgram? StudyProgram { get; set; }
+        public StudentGroup? StudentGroup { get; set; }
+    }
+}

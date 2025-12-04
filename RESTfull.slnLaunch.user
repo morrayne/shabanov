@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "RESTfull.API\\RESTfull.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MyApp.Client\\MyApp.Client.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

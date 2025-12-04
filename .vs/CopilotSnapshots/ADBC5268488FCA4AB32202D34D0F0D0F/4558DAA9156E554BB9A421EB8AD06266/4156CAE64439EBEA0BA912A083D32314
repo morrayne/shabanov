@@ -1,0 +1,73 @@
+﻿@page "/students"
+@inject MyApp.Client.Services.IStudentService StudentService
+@inject NavigationManager NavigationManager
+
+<h3>Студенты</h3>
+
+<button class="btn btn-primary mb-3" @onclick="CreateNew">Создать студента</button>
+
+@if (students == null)
+{
+    <p><em>Загрузка...</em></p>
+}
+else if (!students.Any())
+{
+    <p>Нет записей.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Дата рождения</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in students)
+            {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.LastName</td>
+                    <td>@s.FirstName</td>
+                    <td>@s.BirthDate.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <button class="btn btn-sm btn-info me-1" @onclick="() => Details(s.Id)">Подробнее</button>
+                        <button class="btn btn-sm btn-warning me-1" @onclick="() => Edit(s.Id)">Редактировать</button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => Delete(s.Id)">Удалить</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<RESTfull.Domain.Entities.Student>? students;
+
+    protected override async Task OnInitializedAsync()
+    {
+        students = await StudentService.GetAllAsync();
+    }
+
+    void CreateNew() => NavigationManager.NavigateTo("/students/create");
+    void Edit(int id) => NavigationManager.NavigateTo($"/students/edit/{id}");
+    void Details(int id) => NavigationManager.NavigateTo($"/students/{id}");
+
+    async Task Delete(int id)
+    {
+        var confirmed = true; // можно добавить диалог подтверждения
+        if (confirmed)
+        {
+            var ok = await StudentService.DeleteAsync(id);
+            if (ok)
+            {
+                students = await StudentService.GetAllAsync();
+                StateHasChanged();
+            }
+        }
+    }
+}

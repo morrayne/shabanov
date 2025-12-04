@@ -1,0 +1,376 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.domain\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.domain\\entities\\studyprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\studyprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.domain\\entities\\studentgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\studentgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.domain\\entities\\contactinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\contactinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\myapp.client\\pages\\studentedit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\pages\\studentedit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|solutionrelative:restfull.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\myapp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FBC18C8-E4E7-44AF-8D5A-FA6E67FD5BCC}|RESTfull.Infrastructure\\RESTfull.Infrastructure.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.infrastructure\\data\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FBC18C8-E4E7-44AF-8D5A-FA6E67FD5BCC}|RESTfull.Infrastructure\\RESTfull.Infrastructure.csproj|solutionrelative:restfull.infrastructure\\data\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\myapp.client\\pages\\students.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\pages\\students.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\myapp.client\\pages\\studentdeatils.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\pages\\studentdeatils.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|solutionrelative:restfull.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\myapp.client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\myapp.client\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\myapp.client\\services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FA75F03-1B85-4690-A7DC-B19E7A66BE5A}|MyApp.Client\\MyApp.Client.csproj|solutionrelative:myapp.client\\services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.api\\restfull.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|solutionrelative:restfull.api\\restfull.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FBC18C8-E4E7-44AF-8D5A-FA6E67FD5BCC}|RESTfull.Infrastructure\\RESTfull.Infrastructure.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FBC18C8-E4E7-44AF-8D5A-FA6E67FD5BCC}|RESTfull.Infrastructure\\RESTfull.Infrastructure.csproj|solutionrelative:restfull.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F18E6E14-7BCF-4D6C-A33A-AD50CBA3672E}|RESTfull.API\\RESTfull.API.csproj|solutionrelative:restfull.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|c:\\users\\slava\\desktop\\\u0448\u0430\u0431\u0430\u043D\u043E\u0432\\code\\restfull\\restfull.domain\\entities\\interfaces\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4462A4A-E8CE-41EB-AB73-2694E7A68E16}|RESTfull.Domain\\RESTfull.Domain.csproj|solutionrelative:restfull.domain\\entities\\interfaces\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentEdit.razor",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Pages\\StudentEdit.razor",
+              "RelativeDocumentMoniker": "MyApp.Client\\Pages\\StudentEdit.razor",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Pages\\StudentEdit.razor",
+              "RelativeToolTip": "MyApp.Client\\Pages\\StudentEdit.razor",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAiwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:09:36.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudentDeatils.razor",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Pages\\StudentDeatils.razor",
+              "RelativeDocumentMoniker": "MyApp.Client\\Pages\\StudentDeatils.razor",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Pages\\StudentDeatils.razor",
+              "RelativeToolTip": "MyApp.Client\\Pages\\StudentDeatils.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:09:46.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Students.razor",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Pages\\Students.razor",
+              "RelativeDocumentMoniker": "MyApp.Client\\Pages\\Students.razor",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Pages\\Students.razor",
+              "RelativeToolTip": "MyApp.Client\\Pages\\Students.razor",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwCoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:09:18.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\Program.cs",
+              "RelativeDocumentMoniker": "RESTfull.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\Program.cs",
+              "RelativeToolTip": "RESTfull.API\\Program.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAiwDkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:09:21.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Education.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\Education.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\Education.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\Education.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\Education.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:29:23.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ContactInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\ContactInfo.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\ContactInfo.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\ContactInfo.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\ContactInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:29:13.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\Student.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:28:53.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentGroup.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\StudentGroup.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\StudentGroup.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\StudentGroup.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\StudentGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:29:44.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Class1.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Class1.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T13:51:31.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudyProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\StudyProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:29:32.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Program.cs",
+              "RelativeDocumentMoniker": "MyApp.Client\\Program.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Program.cs",
+              "RelativeToolTip": "MyApp.Client\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:58:26.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Infrastructure\\Data\\Context.cs",
+              "RelativeDocumentMoniker": "RESTfull.Infrastructure\\Data\\Context.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Infrastructure\\Data\\Context.cs",
+              "RelativeToolTip": "RESTfull.Infrastructure\\Data\\Context.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T13:52:24.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RESTfull.API.http",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\RESTfull.API.http",
+              "RelativeDocumentMoniker": "RESTfull.API\\RESTfull.API.http",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\RESTfull.API.http",
+              "RelativeToolTip": "RESTfull.API\\RESTfull.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-29T14:58:41.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Services\\IStudentService.cs",
+              "RelativeDocumentMoniker": "MyApp.Client\\Services\\IStudentService.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Services\\IStudentService.cs",
+              "RelativeToolTip": "MyApp.Client\\Services\\IStudentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T15:08:07.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
+              "ViewState": "AgIAAOoBAAAAAAAAAAAjwP8BAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-11-29T15:34:22.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "MyApp.Client\\Services\\StudentService.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Services\\StudentService.cs",
+              "RelativeToolTip": "MyApp.Client\\Services\\StudentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T15:08:40.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "RESTfull.API\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "RESTfull.API\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:46:01.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\appsettings.json",
+              "RelativeDocumentMoniker": "RESTfull.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.API\\appsettings.json",
+              "RelativeToolTip": "RESTfull.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-29T14:07:46.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "MyApp.Client\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\MyApp.Client\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "MyApp.Client\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:09:58.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "RESTfull.Infrastructure\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeToolTip": "RESTfull.Infrastructure\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:42:53.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\Interfaces\\Repository.cs",
+              "RelativeDocumentMoniker": "RESTfull.Domain\\Entities\\Interfaces\\Repository.cs",
+              "ToolTip": "C:\\Users\\Slava\\Desktop\\\u0428\u0430\u0431\u0430\u043D\u043E\u0432\\code\\RESTfull\\RESTfull.Domain\\Entities\\Interfaces\\Repository.cs",
+              "RelativeToolTip": "RESTfull.Domain\\Entities\\Interfaces\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:41:30.223Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

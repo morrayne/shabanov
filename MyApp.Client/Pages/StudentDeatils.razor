@@ -1,0 +1,58 @@
+﻿@page "/students/{Id:int}"
+@inject MyApp.Client.Services.IStudentService StudentService
+@inject NavigationManager NavigationManager
+
+<h3>Детали студента</h3>
+
+@if (student == null)
+{
+    <p><em>Загрузка...</em></p>
+}
+else
+{
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@($"{student.LastName} {student.FirstName}")</h5>
+            <p><strong>Отчество:</strong> @student.MiddleName</p>
+            <p><strong>Дата рождения:</strong> @student.BirthDate.ToString("yyyy-MM-dd")</p>
+            <h6 class="mt-3">Группа</h6>
+            @if (student.StudentGroup != null)
+            {
+                <p><strong>Название:</strong> @student.StudentGroup.Name</p>
+                <p><strong>Номер:</strong> @student.StudentGroup.Number</p>
+            }
+            else
+            {
+                <p><em>Группа не назначена</em></p>
+            }
+
+            <h6 class="mt-3">Программа обучения</h6>
+            @if (student.StudyProgram != null)
+            {
+                <p><strong>Учреждение:</strong> @student.StudyProgram.Institution</p>
+                <p><strong>Факультет:</strong> @student.StudyProgram.Faculty</p>
+                <p><strong>Направление:</strong> @student.StudyProgram.Direction</p>
+                <p><strong>Специальность:</strong> @student.StudyProgram.Speciality</p>
+            }
+            else
+            {
+                <p><em>Программа не назначена</em></p>
+            }
+
+
+            <button class="btn btn-secondary" @onclick="GoBack">Назад</button>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private RESTfull.Domain.Entities.Student? student;
+
+    protected override async Task OnInitializedAsync()
+    {
+        student = await StudentService.GetByIdAsync(Id);
+    }
+
+    void GoBack() => NavigationManager.NavigateTo("/students");
+}

@@ -1,0 +1,54 @@
+﻿using System.Net.Http.Json;
+using RESTfull.Domain.Entities;
+
+namespace MyApp.Client.Services
+{
+    public class StudentService : IStudentService
+    {
+        private readonly HttpClient _http;
+
+        public StudentService(HttpClient http)
+        {
+            _http = http;
+        }
+
+        public async Task<List<Student>> GetAllAsync(string? search = null)
+        {
+            var url = "api/students";
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                url += $"?search={System.Uri.EscapeDataString(search)}";
+            }
+
+            var res = await _http.GetFromJsonAsync<List<Student>>(url);
+            return res ?? new List<Student>();
+        }
+
+        public async Task<Student?> GetByIdAsync(int id)
+        {
+            return await _http.GetFromJsonAsync<Student>($"api/students/{id}");
+        }
+
+        public async Task<Student?> CreateAsync(Student student)
+        {
+            var resp = await _http.PostAsJsonAsync("api/students", student);
+            if (resp.IsSuccessStatusCode)
+            {
+                return await resp.Content.ReadFromJsonAsync<Student>();
+            }
+            return null;
+        }
+
+        public async Task<bool> UpdateAsync(int id, Student student)
+        {
+            var resp = await _http.PutAsJsonAsync($"api/students/{id}", student);
+            return resp.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var resp = await _http.DeleteAsync($"api/students/{id}");
+            return resp.IsSuccessStatusCode;
+        }
+    }
+}

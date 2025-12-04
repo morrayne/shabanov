@@ -1,0 +1,49 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using RESTfull.Domain.Entities;
+
+[ApiController]
+[Route("api/[controller]")]
+public class StudentsController : ControllerBase
+{
+    private readonly IRepository<Student> _repo;
+
+    public StudentsController(IRepository<Student> repo)
+    {
+        _repo = repo;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll() => Ok(await _repo.GetAllAsync());
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        var s = await _repo.GetByIdAsync(id);
+        if (s == null) return NotFound();
+        return Ok(s);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] Student student)
+    {
+        await _repo.CreateAsync(student);
+        return CreatedAtAction(nameof(Get), new { id = student.Id }, student);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] Student student)
+    {
+        var exists = await _repo.GetByIdAsync(id);
+        if (exists == null) return NotFound();
+        student.Id = id;
+        await _repo.UpdateAsync(student);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _repo.DeleteAsync(id);
+        return NoContent();
+    }
+}

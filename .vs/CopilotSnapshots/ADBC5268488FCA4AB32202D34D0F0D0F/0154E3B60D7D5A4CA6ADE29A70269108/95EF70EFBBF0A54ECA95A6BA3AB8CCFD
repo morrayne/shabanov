@@ -1,0 +1,119 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using RESTfull.Domain.Entities;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
+[ApiController]
+[Route("api/[controller]")]
+public class StudentsController : ControllerBase
+{
+    private readonly IRepository<Student> _repo;
+    private readonly ILogger<StudentsController> _logger;
+
+    public StudentsController(IRepository<Student> repo, ILogger<StudentsController> logger)
+    {
+        _repo = repo;
+        _logger = logger;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll([FromQuery] string? search)
+    {
+        try
+        {
+            var students = await _repo.GetAllAsync();
+            if (string.IsNullOrWhiteSpace(search))
+                return Ok(students);
+
+            if (int.TryParse(search, out var id))
+            {
+                var byId = students.Where(s => s.Id == id).ToList();
+                return Ok(byId);
+            }
+
+            var q = search.Trim();
+            var byName = students.Where(s =>
+                (!string.IsNullOrEmpty(s.FirstName) && s.FirstName.Contains(q, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrEmpty(s.LastName) && s.LastName.Contains(q, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrEmpty(s.MiddleName) && s.MiddleName.Contains(q, StringComparison.OrdinalIgnoreCase))
+            ).ToList();
+
+            return Ok(byName);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error in GetAll");
+            return Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        try
+        {
+            var s = await _repo.GetByIdAsync(id);
+            if (s == null) return NotFound();
+            return Ok(s);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error in Get");
+            return Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] Student student)
+    {
+        try
+        {
+            if (student == null) return BadRequest("Student is null");
+            if (string.IsNullOrWhiteSpace(student.FirstName) || string.IsNullOrWhiteSpace(student.LastName))
+                return BadRequest("FirstName and LastName are required.");
+
+            await _repo.CreateAsync(student);
+            return CreatedAtAction(nameof(Get), new { id = student.Id }, student);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error creating student");
+            return Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] Student student)
+    {
+        try
+        {
+            var exists = await _repo.GetByIdAsync(id);
+            if (exists == null) return NotFound();
+            student.Id = id;
+            await _repo.UpdateAsync(student);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error updating student");
+            return Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            await _repo.DeleteAsync(id);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting student");
+            return Problem(detail: ex.Message, statusCode: 500);
+        }
+    }
+}
